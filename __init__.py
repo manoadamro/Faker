@@ -73,12 +73,6 @@ def clinician():
         nhs_smartcard_number='random_number'
 )
 
-def medication():
-    return GEN.dict(
-        identifier=identifier(),
-        name='medicine_name'
-)
-
 def note():
     return GEN.dict(
         identifier=identifier(),
@@ -114,13 +108,20 @@ def notification():
         status='boolean'
     )
 
-def Medication():
+def medication():
     return GEN.dict(
         identifier=identifier(),
         name='medicine'
     )
 
+def dose():
+    return GEN.dict(
+        identifier=identifier(),
+        medication=medication(),
+        amount='random_digit',
+        unit='units'
+    )
 
 # pprint(identifier())
 
-pprint(location())
+pprint(dose())
