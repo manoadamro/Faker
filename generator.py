@@ -1,8 +1,52 @@
 from faker import Faker as FakerBase
-from types import Types
 
 from random import choice
 from json import dumps
+
+
+class Types(object):
+
+        ethnicity = [
+            'white_british',
+            'black_british',
+        ]
+
+        sex = [
+            'male',
+            'female'
+        ]
+
+        gender = [
+            'male',
+            'female',
+            'Asexual',
+            'Female to male trans man',
+            'gender neutral',
+            'hermaphrodite',
+            'intersex person',
+            'male to female trans woman',
+            'polygender',
+            'other'
+        ]
+
+        override_country = [
+            'United Kingdom'
+        ]
+
+        units = [
+            'moll/l'
+        ]
+
+        prandial_tag = [
+            'none',
+            'before_breakfast',
+            'after_breakfast',
+            'before_lunch',
+            'after_lunch',
+            'before_dinner',
+            'after_dinner',
+            'other'
+        ]
 
 class Generator(Types):
 
@@ -19,7 +63,7 @@ class Generator(Types):
                 return choice(method)
 
     def __call__(self, name):
-        if name is None or isinstance(name, dict): return name
+        if name is None or isinstance(name, (dict, list, tuple)): return name
         item = self._resolve(name)
         if not isinstance(item, (int, float, bool)) and item is not None:
             return str(item)
