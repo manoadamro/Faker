@@ -57,6 +57,12 @@ def clinician():
         nhs_smartcard_number='random_number'
 )
 
+def medication():
+    return GEN.dict(
+        identifier=identifier(),
+        name='medicine_name'
+)
+
 def note():
     return GEN.dict(
         identifier=identifier(),

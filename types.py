@@ -31,3 +31,11 @@ class Types(object):
             'Doctor',
             'midwife'
         ]
+
+        medicine_name = [
+            'Insulin',
+            'Biguanides',
+            'Sulphonylureas',
+            'Metformin',
+            'Amylin analogues'
+        ]
