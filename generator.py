@@ -63,6 +63,11 @@ class Types(object):
             'hospital'
         ]
 
+        clinician_type = [
+            'Doctor',
+            'midwife'
+        ]
+
 class Generator(Types):
 
     base = FakerBase('en_GB')
