@@ -48,6 +48,11 @@ class Types(object):
             'other'
         ]
 
+        message_type = [
+            'patient_notification',
+            'clinitian_notification'
+        ]
+
 class Generator(Types):
 
     base = FakerBase('en_GB')
