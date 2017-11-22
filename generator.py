@@ -53,6 +53,12 @@ class Types(object):
             'clinitian_notification'
         ]
 
+        medicine = [
+            'Medication A',
+            'Medication B',
+            'Medication C'
+        ]
+
 class Generator(Types):
 
     base = FakerBase('en_GB')

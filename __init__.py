@@ -88,13 +88,23 @@ def reading():
     )
 
 def notification():
-    identifier=identifier(),
-    notification_timestamp='date_time',
-    from_id=identifier(),
-    to_id=identifier(),
-    message_type_id='message_type',
-    message_content='text'
-    status='boolean'
+    return GEN.dict(
+        identifier=identifier(),
+        notification_timestamp='date_time',
+        from_id=identifier(),
+        to_id=identifier(),
+        message_type_id='message_type',
+        message_content='text'
+        status='boolean'
+    )
+
+def Medication():
+    return GEN.dict(
+        identifier=identifier(),
+        name='medicine'
+    )
+
+
 # pprint(identifier())
 
 pprint(reading())
