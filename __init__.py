@@ -29,6 +29,16 @@ def address():
         country='override_country'
     )
 
+def location():
+    return GEN.dict(
+        identifier=identifier(),
+        location_type='location_type',
+        display_name='user_name',
+        address=address(),
+        parent=identifier(),
+        children=array_of(identifier, count=2)
+    )
+
 def personal_address():
     return GEN.dict(
         address=address(),
@@ -107,4 +117,4 @@ def Medication():
 
 # pprint(identifier())
 
-pprint(reading())
+pprint(location())

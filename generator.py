@@ -59,6 +59,10 @@ class Types(object):
             'Medication C'
         ]
 
+        location_type = [
+            'hospital'
+        ]
+
 class Generator(Types):
 
     base = FakerBase('en_GB')
