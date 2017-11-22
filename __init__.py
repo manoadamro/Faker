@@ -94,7 +94,7 @@ def notification():
         from_id=identifier(),
         to_id=identifier(),
         message_type_id='message_type',
-        message_content='text'
+        message_content='text',
         status='boolean'
     )
 
