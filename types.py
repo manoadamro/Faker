@@ -26,3 +26,8 @@ class Types(object):
         override_country = [
             'United Kingdom'
         ]
+
+        clinician_type = [
+            'Doctor',
+            'midwife'
+        ]

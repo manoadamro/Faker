@@ -46,6 +46,17 @@ def user():
         gender='gender'
     )
 
+def clinician():
+    return GEN.dict(
+        identifier=identifier(),
+        first_name='first_name_female',
+        last_name='last_name_female',
+        clinician_type='clinician_type',
+        phone_number='phone_number',
+        email_address='email',
+        nhs_smartcard_number='random_number'
+)
+
 def note():
     return GEN.dict(
         identifier=identifier(),
