@@ -3,6 +3,12 @@ from pprint import pprint
 
 GEN = Generator()
 
+
+def array_of(method, count=5):
+    array = [method() for i in range(0, count)]
+    return array
+
+
 def identifier():
     return GEN.dict(
         uuid='uuid4',
@@ -64,9 +70,23 @@ def note():
         content='text'
     )
 
-def array_of(method, count=5):
-    array = [method() for i in range(0, count)]
-    return array
+def reading_metadata():
+    return GEN.dict(
+        meter_id=identifier(),
+        # meter_serial='mac_address'
+    )
+
+def reading():
+    return GEN.dict(
+        identifier=identifier(),
+        timestamp='date_time',
+        blood_glucose_value='random_digit',
+        units='units',
+        prandial_tag='prandial_tag',
+        notes=array_of(note),
+        reading_metadata=reading_metadata()
+    )
 
 # pprint(identifier())
-pprint(array_of(user))
+
+pprint(reading())
