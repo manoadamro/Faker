@@ -25,7 +25,10 @@ eg:
 
 
 ### End Points
+End points currently have no behaviour for POST requests but will all respond to GET requests
+
 ```
+# base url
 http://localhost:5000/v1
 
   # gets a list of audit entries (array)
