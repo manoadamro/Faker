@@ -7,9 +7,12 @@ creates fake data
   python3 Faker
 ```
 
+'''http://localhost:5000/'''
+
+
 ### Returning an array
 
-endpoints that return an array will return 5 items by default, this can be overridden in the relevant method in the controller (__main__.py).
+endpoints that return an array will return 5 items by default, this can be overridden in the relevant method in the controller (\_\_main\_\_.py).
 
 eg:
 ```python
