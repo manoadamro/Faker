@@ -8,7 +8,17 @@ creates fake data
 ```
 
 ```
-http://localhost:5000/
+http://localhost:5000/v1
+  /dhos-auditentries
+  /dhos-clinician/<clinician_id>
+  /dhos-locations/
+  /dhos-location/<location_id>/users
+  /dhos-location/<location_id>/clinician/<clinician_id>/users
+  /dhos-notifications/<to_id>
+  /dhos-users/user/<user_id>
+  /gdm-patienthistory/<user_id>
+  /gdm-dose/<reading_id>
+  /gdm-readings/<user_id>
 ```
 
 
