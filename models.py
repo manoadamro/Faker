@@ -140,5 +140,3 @@ def audit_entry():
         identifier=identifier(),
         parameters=array_of(audit_parameter, count=5),
     )
-
-pprint(audit_entry())
