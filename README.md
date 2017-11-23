@@ -7,7 +7,9 @@ creates fake data
   python3 Faker
 ```
 
-'''http://localhost:5000/'''
+```
+http://localhost:5000/
+```
 
 
 ### Returning an array
