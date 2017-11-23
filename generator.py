@@ -1,7 +1,6 @@
 from faker import Faker as FakerBase
 from fields import Fields
 from random import choice
-from json import dumps
 
 
 class Generator(Fields):
@@ -47,11 +46,3 @@ class Generator(Fields):
         d = {}
         for attr in attrs: d[attr] = self(attrs[attr])
         return d
-    #
-    # def json(self, **attrs):
-    #     '''
-    #     f.json(some_name='name', some_address='address')
-    #     # ('{"some_name": "William House", "some_address": "862 Jose '
-    #     #  'Mills\\nJohnnymouth, AK 08515-2330"}')
-    #     '''
-    #     return dumps(self.dict(**attrs))
